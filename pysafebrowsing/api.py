@@ -52,7 +52,8 @@ class SafeBrowsing(object):
                 self.api_url,
                 data=json.dumps(data),
                 params={'key': self.api_key},
-                headers=headers
+                headers=headers,
+                verify=False
         )
         if r.status_code == 200:
             # Return clean results
